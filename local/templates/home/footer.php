@@ -1,3 +1,7 @@
+<?
+use \Bitrix\Main\Localization\Loc as Lc; 
+Lc::loadMessages(__FILE__);
+?>
 <footer class="site-footer">
     <div class="container">
       <div class="row">
@@ -20,24 +24,39 @@
           <div class="row mb-5">
             <div class="col-md-12">
               <h3 class="footer-heading mb-4">
-                <!-- Navigations -->
-                <?=GetMessage("NAVIGATION")?>
+                <?Lc::GetMessage("NAVIGATION")?>
               </h3>
             </div>
             <div class="col-md-6 col-lg-6">
               <ul class="list-unstyled">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Buy</a></li>
-                <li><a href="#">Rent</a></li>
-                <li><a href="#">Properties</a></li>
+                <li><a href="#">
+                  <?Lc::GetMessage("HOME")?>
+                </a></li>
+                <li><a href="#">
+                  <?Lc::GetMessage("BUY")?>
+                </a></li>
+                <li><a href="#">
+                  <?Lc::GetMessage("RENT")?>
+                </a></li>
+                <li><a href="#">
+                  <?Lc::GetMessage("PROPERTIES")?>
+                </a></li>
               </ul>
             </div>
             <div class="col-md-6 col-lg-6">
               <ul class="list-unstyled">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Terms</a></li>
+                <li><a href="#">
+                  <?Lc::GetMessage("ABOUT US")?>
+                </a></li>
+                <li><a href="#">
+                  <?Lc::GetMessage("PRIVACY POLICY")?>
+                </a></li>
+                <li><a href="#">
+                  <?Lc::GetMessage("CONTACT US")?>
+                </a></li>
+                <li><a href="#">
+                  <?Lc::GetMessage("TERMS")?>
+                </a></li>
               </ul>
             </div>
           </div>
