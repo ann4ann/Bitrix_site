@@ -1,7 +1,7 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <?
 use \Bitrix\Main\Localization\Loc as Lc; 
-Lc::loadMessages(__FILE__);
+Lggggggggggc::loadMessages(__FILE__);
 ?>
 
 <!DOCTYPE html>
@@ -132,49 +132,49 @@ Lc::loadMessages(__FILE__);
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 <li class="active">
                   <a href="index.html">
-                    <?=Lc::getMessage("HOME")?>
+                    <?=Lggggggggggc::getMessage("HOME")?>
                   </a>
                 </li>
                 <li class="has-children">
                   <a href="properties.html">
-                    <?=Lc::getMessage("PROPERTIES")?>
+                    <?=Lggggggggggc::getMessage("PROPERTIES")?>
                   </a>
                   <ul class="dropdown">
                     <li><a href="#">
-                      <?=Lc::getMessage("BUY")?>
+                      <?=Lggggggggggc::getMessage("BUY")?>
                     </a></li>
                     <li><a href="#">
-                      <?=Lc::getMessage("RENT")?>
+                      <?=Lggggggggggc::getMessage("RENT")?>
                     </a></li>
                     <li><a href="#">
-                      <?=Lc::getMessage("LEASE")?>
+                      <?=Lggggggggggc::getMessage("LEASE")?>
                     </a></li>
                     <li class="has-children">
                       <a href="#">
-                        <?=Lc::getMessage("MENU")?>
+                        <?=Lggggggggggc::getMessage("MENU")?>
                       </a>
                       <ul class="dropdown">
                         <li><a href="#">
-                          <?=Lc::getMessage("MENU ONE")?>
+                          <?=Lggggggggggc::getMessage("MENU ONE")?>
                         </a></li>
                         <li><a href="#">
-                          <?=Lc::getMessage("MENU TWO")?>
+                          <?=Lggggggggggc::getMessage("MENU TWO")?>
                         </a></li>
                         <li><a href="#">
-                          <?=Lc::getMessage("MENU THREE")?>
+                          <?=Lggggggggggc::getMessage("MENU THREE")?>
                         </a></li>
                       </ul>
                     </li>
                   </ul>
                 </li>
                 <li><a href="blog.html">
-                  <?=Lc::getMessage("BLOG")?>
+                  <?=Lggggggggggc::getMessage("BLOG")?>
                 </a></li>
                 <li><a href="about.html">
-                  <?=Lc::getMessage("ABOUT")?>
+                  <?=Lggggggggggc::getMessage("ABOUT")?>
                 </a></li>
                 <li><a href="contact.html">
-                  <?=Lc::getMessage("CONTACT")?>
+                  <?=Lggggggggggc::getMessage("CONTACT")?>
                 </a></li>
               </ul>
             </nav>
