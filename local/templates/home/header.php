@@ -1,7 +1,7 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <?
 use \Bitrix\Main\Localization\Loc as Lc; 
-Lggggggggggc::loadMessages(__FILE__);
+Lc::loadMessages(__FILE__);
 ?>
 
 <!DOCTYPE html>
@@ -49,8 +49,7 @@ Lggggggggggc::loadMessages(__FILE__);
 
   <div id="panel"><?$APPLICATION->ShowPanel();?></div>
 
-  <!-- Почему-то вызывает ошибку при загрузке шаблона -->
-  <!-- <div class="site-loader"></div> -->
+  <div class="site-loader"></div>
 
   <div class="site-wrap">
 
@@ -132,49 +131,49 @@ Lggggggggggc::loadMessages(__FILE__);
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 <li class="active">
                   <a href="index.html">
-                    <?=Lggggggggggc::getMessage("HOME")?>
+                    <?=Lc::getMessage("HOME")?>
                   </a>
                 </li>
                 <li class="has-children">
                   <a href="properties.html">
-                    <?=Lggggggggggc::getMessage("PROPERTIES")?>
+                    <?=Lc::getMessage("PROPERTIES")?>
                   </a>
                   <ul class="dropdown">
                     <li><a href="#">
-                      <?=Lggggggggggc::getMessage("BUY")?>
+                      <?=Lc::getMessage("BUY")?>
                     </a></li>
                     <li><a href="#">
-                      <?=Lggggggggggc::getMessage("RENT")?>
+                      <?=Lc::getMessage("RENT")?>
                     </a></li>
                     <li><a href="#">
-                      <?=Lggggggggggc::getMessage("LEASE")?>
+                      <?=Lc::getMessage("LEASE")?>
                     </a></li>
                     <li class="has-children">
                       <a href="#">
-                        <?=Lggggggggggc::getMessage("MENU")?>
+                        <?=Lc::getMessage("MENU")?>
                       </a>
                       <ul class="dropdown">
                         <li><a href="#">
-                          <?=Lggggggggggc::getMessage("MENU ONE")?>
+                          <?=Lc::getMessage("MENU ONE")?>
                         </a></li>
                         <li><a href="#">
-                          <?=Lggggggggggc::getMessage("MENU TWO")?>
+                          <?=Lc::getMessage("MENU TWO")?>
                         </a></li>
                         <li><a href="#">
-                          <?=Lggggggggggc::getMessage("MENU THREE")?>
+                          <?=Lc::getMessage("MENU THREE")?>
                         </a></li>
                       </ul>
                     </li>
                   </ul>
                 </li>
                 <li><a href="blog.html">
-                  <?=Lggggggggggc::getMessage("BLOG")?>
+                  <?=Lc::getMessage("BLOG")?>
                 </a></li>
                 <li><a href="about.html">
-                  <?=Lggggggggggc::getMessage("ABOUT")?>
+                  <?=Lc::getMessage("ABOUT")?>
                 </a></li>
                 <li><a href="contact.html">
-                  <?=Lggggggggggc::getMessage("CONTACT")?>
+                  <?=Lc::getMessage("CONTACT")?>
                 </a></li>
               </ul>
             </nav>
