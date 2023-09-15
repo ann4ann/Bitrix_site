@@ -49,7 +49,8 @@ Lc::loadMessages(__FILE__);
 
   <div id="panel"><?$APPLICATION->ShowPanel();?></div>
 
-  <div class="site-loader"></div>
+  <!-- Почему-то вызывает ошибку при загрузке шаблона -->
+  <!-- <div class="site-loader"></div> -->
 
   <div class="site-wrap">
 
@@ -131,49 +132,49 @@ Lc::loadMessages(__FILE__);
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 <li class="active">
                   <a href="index.html">
-                    <?Lc::GetMessage("HOME")?>
+                    <?=Lc::getMessage("HOME")?>
                   </a>
                 </li>
                 <li class="has-children">
                   <a href="properties.html">
-                    <?Lc::GetMessage("PROPERTIES")?>
+                    <?=Lc::getMessage("PROPERTIES")?>
                   </a>
                   <ul class="dropdown">
                     <li><a href="#">
-                      <?Lc::GetMessage("BUY")?>
+                      <?=Lc::getMessage("BUY")?>
                     </a></li>
                     <li><a href="#">
-                      <?Lc::GetMessage("RENT")?>
+                      <?=Lc::getMessage("RENT")?>
                     </a></li>
                     <li><a href="#">
-                      <?Lc::GetMessage("LEASE")?>
+                      <?=Lc::getMessage("LEASE")?>
                     </a></li>
                     <li class="has-children">
                       <a href="#">
-                        <?Lc::GetMessage("MENU")?>
+                        <?=Lc::getMessage("MENU")?>
                       </a>
                       <ul class="dropdown">
                         <li><a href="#">
-                          <?Lc::GetMessage("MENU ONE")?>
+                          <?=Lc::getMessage("MENU ONE")?>
                         </a></li>
                         <li><a href="#">
-                          <?Lc::GetMessage("MENU TWO")?>
+                          <?=Lc::getMessage("MENU TWO")?>
                         </a></li>
                         <li><a href="#">
-                          <?Lc::GetMessage("MENU THREE")?>
+                          <?=Lc::getMessage("MENU THREE")?>
                         </a></li>
                       </ul>
                     </li>
                   </ul>
                 </li>
                 <li><a href="blog.html">
-                  <?Lc::GetMessage("BLOG")?>
+                  <?=Lc::getMessage("BLOG")?>
                 </a></li>
                 <li><a href="about.html">
-                  <?Lc::GetMessage("ABOUT")?>
+                  <?=Lc::getMessage("ABOUT")?>
                 </a></li>
                 <li><a href="contact.html">
-                  <?Lc::GetMessage("CONTACT")?>
+                  <?=Lc::getMessage("CONTACT")?>
                 </a></li>
               </ul>
             </nav>

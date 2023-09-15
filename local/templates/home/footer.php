@@ -2,6 +2,7 @@
 use \Bitrix\Main\Localization\Loc as Lc; 
 Lc::loadMessages(__FILE__);
 ?>
+
 <footer class="site-footer">
     <div class="container">
       <div class="row">
@@ -24,38 +25,38 @@ Lc::loadMessages(__FILE__);
           <div class="row mb-5">
             <div class="col-md-12">
               <h3 class="footer-heading mb-4">
-                <?Lc::GetMessage("NAVIGATION")?>
+                <?=Lc::getMessage("NAVIGATION")?>
               </h3>
             </div>
             <div class="col-md-6 col-lg-6">
               <ul class="list-unstyled">
                 <li><a href="#">
-                  <?Lc::GetMessage("HOME")?>
+                  <?=Lc::getMessage("HOME")?>
                 </a></li>
                 <li><a href="#">
-                  <?Lc::GetMessage("BUY")?>
+                  <?=Lc::getMessage("BUY")?>
                 </a></li>
                 <li><a href="#">
-                  <?Lc::GetMessage("RENT")?>
+                  <?=Lc::getMessage("RENT")?>
                 </a></li>
                 <li><a href="#">
-                  <?Lc::GetMessage("PROPERTIES")?>
+                  <?=Lc::getMessage("PROPERTIES")?>
                 </a></li>
               </ul>
             </div>
             <div class="col-md-6 col-lg-6">
               <ul class="list-unstyled">
                 <li><a href="#">
-                  <?Lc::GetMessage("ABOUT US")?>
+                  <?=Lc::getMessage("ABOUT US")?>
                 </a></li>
                 <li><a href="#">
-                  <?Lc::GetMessage("PRIVACY POLICY")?>
+                  <?=Lc::getMessage("PRIVACY POLICY")?>
                 </a></li>
                 <li><a href="#">
-                  <?Lc::GetMessage("CONTACT US")?>
+                  <?=Lc::getMessage("CONTACT US")?>
                 </a></li>
                 <li><a href="#">
-                  <?Lc::GetMessage("TERMS")?>
+                  <?=Lc::getMessage("TERMS")?>
                 </a></li>
               </ul>
             </div>
