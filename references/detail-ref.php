@@ -3,9 +3,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("title", "Просмотр ссылки");
 $APPLICATION->SetTitle("Просмотр ссылки");
 ?><?$APPLICATION->IncludeComponent(
-	"bitrix:news.detail",
-	"",
-	Array(
+	"bitrix:news.detail", 
+	".default", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y",
@@ -28,10 +28,13 @@ $APPLICATION->SetTitle("Просмотр ссылки");
 		"DISPLAY_TOP_PAGER" => "N",
 		"ELEMENT_CODE" => "",
 		"ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
-		"FIELD_CODE" => array("",""),
-		"IBLOCK_ID" => "7",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"IBLOCK_ID" => "6",
 		"IBLOCK_TYPE" => "references",
-		"IBLOCK_URL" => "",
+		"IBLOCK_URL" => "index.php",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
@@ -40,7 +43,10 @@ $APPLICATION->SetTitle("Просмотр ссылки");
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Страница",
-		"PROPERTY_CODE" => array("",""),
+		"PROPERTY_CODE" => array(
+			0 => "ICON_CODE",
+			1 => "",
+		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_CANONICAL_URL" => "N",
 		"SET_LAST_MODIFIED" => "N",
@@ -51,6 +57,8 @@ $APPLICATION->SetTitle("Просмотр ссылки");
 		"SHOW_404" => "N",
 		"STRICT_SECTION_CHECK" => "N",
 		"USE_PERMISSIONS" => "N",
-		"USE_SHARE" => "N"
-	)
+		"USE_SHARE" => "N",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

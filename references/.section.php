@@ -1,6 +1,6 @@
 <?
-$sSectionName = "Новый раздел";
-$arDirProperties = Array(
-   "title" => "Ссылки"
+$sSectionName = "Сервисы";
+$arDirProperties = array(
+   "title" => "Сервисы"
 );
 ?>

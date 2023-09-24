@@ -22,61 +22,22 @@ Lc::loadMessages(__FILE__);
 
         </div>
         <div class="col-lg-4 mb-5 mb-lg-0">
-          <div class="row mb-5">
-            <div class="col-md-12">
-              <h3 class="footer-heading mb-4">
-                <?=Lc::getMessage("NAVIGATION")?>
-              </h3>
-            </div>
-            <div class="col-md-6 col-lg-6">
-              <ul class="list-unstyled">
-                <li><a href="#">
-                  <?=Lc::getMessage("HOME")?>
-                </a></li>
-                <li><a href="#">
-                  <?=Lc::getMessage("BUY")?>
-                </a></li>
-                <li><a href="#">
-                  <?=Lc::getMessage("RENT")?>
-                </a></li>
-                <li><a href="#">
-                  <?=Lc::getMessage("PROPERTIES")?>
-                </a></li>
-              </ul>
-            </div>
-            <div class="col-md-6 col-lg-6">
-              <ul class="list-unstyled">
-                <li><a href="#">
-                  <?=Lc::getMessage("ABOUT US")?>
-                </a></li>
-                <li><a href="#">
-                  <?=Lc::getMessage("PRIVACY POLICY")?>
-                </a></li>
-                <li><a href="#">
-                  <?=Lc::getMessage("CONTACT US")?>
-                </a></li>
-                <li><a href="#">
-                  <?=Lc::getMessage("TERMS")?>
-                </a></li>
-              </ul>
-            </div>
-          </div>
-          <?$APPLICATION->IncludeComponent(
-              "bitrix:menu",
-              "horizontal_multilevel",
-              Array(
-                "ALLOW_MULTI_SELECT" => "N",
-                "CHILD_MENU_TYPE" => "left",
-                "DELAY" => "N",
-                "MAX_LEVEL" => "2",
-                "MENU_CACHE_GET_VARS" => array(""),
-                "MENU_CACHE_TIME" => "3600",
-                "MENU_CACHE_TYPE" => "N",
-                "MENU_CACHE_USE_GROUPS" => "Y",
-                "ROOT_MENU_TYPE" => "top",
-                "USE_EXT" => "N"
-              )
-            );?>
+
+          <?$APPLICATION->IncludeComponent("bitrix:menu", "bottom_two_columns_menu", Array(
+            "ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+              "CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
+              "DELAY" => "N",	// Откладывать выполнение шаблона меню
+              "MAX_LEVEL" => "2",	// Уровень вложенности меню
+              "MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
+              "MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
+              "MENU_CACHE_TYPE" => "N",	// Тип кеширования
+              "MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+              "ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
+              "USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+              "COMPONENT_TEMPLATE" => "horizontal_multilevel"
+            ),
+            false
+          );?>
 
         </div>
 

@@ -122,79 +122,29 @@ Lc::loadMessages(__FILE__);
               );?>
             </h1>
           </div>
+          
+          <!-- MENU -->
           <div class="col-4 col-md-4 col-lg-8">
-            <nav class="site-navigation text-right text-md-right" role="navigation">
-
-              <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
-                  class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-
-              <ul class="site-menu js-clone-nav d-none d-lg-block">
-                <li class="active">
-                  <a href="index.html">
-                    <?=Lc::getMessage("HOME")?>
-                  </a>
-                </li>
-                <li class="has-children">
-                  <a href="properties.html">
-                    <?=Lc::getMessage("PROPERTIES")?>
-                  </a>
-                  <ul class="dropdown">
-                    <li><a href="#">
-                      <?=Lc::getMessage("BUY")?>
-                    </a></li>
-                    <li><a href="#">
-                      <?=Lc::getMessage("RENT")?>
-                    </a></li>
-                    <li><a href="#">
-                      <?=Lc::getMessage("LEASE")?>
-                    </a></li>
-                    <li class="has-children">
-                      <a href="#">
-                        <?=Lc::getMessage("MENU")?>
-                      </a>
-                      <ul class="dropdown">
-                        <li><a href="#">
-                          <?=Lc::getMessage("MENU ONE")?>
-                        </a></li>
-                        <li><a href="#">
-                          <?=Lc::getMessage("MENU TWO")?>
-                        </a></li>
-                        <li><a href="#">
-                          <?=Lc::getMessage("MENU THREE")?>
-                        </a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="blog.html">
-                  <?=Lc::getMessage("BLOG")?>
-                </a></li>
-                <li><a href="about.html">
-                  <?=Lc::getMessage("ABOUT")?>
-                </a></li>
-                <li><a href="contact.html">
-                  <?=Lc::getMessage("CONTACT")?>
-                </a></li>
-              </ul>
-            </nav>
             <?$APPLICATION->IncludeComponent(
-              "bitrix:menu",
-              "horizontal_multilevel",
-              Array(
+              "bitrix:menu", 
+              "top_horisontal_menu", 
+              array(
                 "ALLOW_MULTI_SELECT" => "N",
                 "CHILD_MENU_TYPE" => "left",
                 "DELAY" => "N",
-                "MAX_LEVEL" => "2",
-                "MENU_CACHE_GET_VARS" => array(""),
+                "MAX_LEVEL" => "3",
+                "MENU_CACHE_GET_VARS" => array(
+                ),
                 "MENU_CACHE_TIME" => "3600",
                 "MENU_CACHE_TYPE" => "N",
                 "MENU_CACHE_USE_GROUPS" => "Y",
                 "ROOT_MENU_TYPE" => "top",
-                "USE_EXT" => "N"
-              )
+                "USE_EXT" => "N",
+                "COMPONENT_TEMPLATE" => "top_horisontal_menu"
+              ),
+              false
             );?>
           </div>
-
 
         </div>
       </div>
