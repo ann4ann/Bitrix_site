@@ -3,11 +3,11 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("title", "Просмотр объявления");
 $APPLICATION->SetTitle("Детально объявление");
 ?><?$APPLICATION->IncludeComponent(
-	"bitrix:news.detail", 
-	".default", 
-	array(
+	"bitrix:news.detail",
+	"detail_ads_page",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
@@ -16,7 +16,7 @@ $APPLICATION->SetTitle("Детально объявление");
 		"AJAX_OPTION_STYLE" => "Y",
 		"BROWSER_TITLE" => "-",
 		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
+		"CACHE_TIME" => "36000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
 		"DETAIL_URL" => "#ELEMENT_CODE#/",
@@ -28,14 +28,11 @@ $APPLICATION->SetTitle("Детально объявление");
 		"DISPLAY_TOP_PAGER" => "N",
 		"ELEMENT_CODE" => "",
 		"ELEMENT_ID" => $_REQUEST["ID"],
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"FIELD_CODE" => array(""),
 		"IBLOCK_ID" => "5",
 		"IBLOCK_TYPE" => "announcements",
 		"IBLOCK_URL" => "index.php",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
@@ -43,10 +40,7 @@ $APPLICATION->SetTitle("Детально объявление");
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Страница",
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"PROPERTY_CODE" => array("LINKS","","ADDITITONAL",""),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_CANONICAL_URL" => "N",
 		"SET_LAST_MODIFIED" => "N",
@@ -57,8 +51,6 @@ $APPLICATION->SetTitle("Детально объявление");
 		"SHOW_404" => "N",
 		"STRICT_SECTION_CHECK" => "N",
 		"USE_PERMISSIONS" => "N",
-		"USE_SHARE" => "N",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
+		"USE_SHARE" => "N"
+	)
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
