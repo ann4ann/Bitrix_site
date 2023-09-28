@@ -2,9 +2,9 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Вакансии");
 ?><?$APPLICATION->IncludeComponent(
-	"bitrix:news", 
-	"mcart", 
-	array(
+	"bitrix:news",
+	"mcart",
+	Array(
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -21,20 +21,11 @@ $APPLICATION->SetTitle("Вакансии");
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
-		"DETAIL_FIELD_CODE" => array(
-			0 => "",
-			1 => "PROPERTY_LIKE",
-			2 => "PROPERTY_DISLIKE",
-			3 => "",
-		),
+		"DETAIL_FIELD_CODE" => array("","PROPERTY_LIKE","PROPERTY_DISLIKE",""),
 		"DETAIL_PAGER_SHOW_ALL" => "Y",
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
-		"DETAIL_PROPERTY_CODE" => array(
-			0 => "DISLIKE",
-			1 => "LIKE",
-			2 => "",
-		),
+		"DETAIL_PROPERTY_CODE" => array("DISLIKE","LIKE",""),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_AS_RATING" => "rating",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
@@ -48,17 +39,8 @@ $APPLICATION->SetTitle("Вакансии");
 		"IBLOCK_TYPE" => "news",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"LIST_FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"LIST_PROPERTY_CODE" => array(
-			0 => "DISLIKE",
-			1 => "LIKE",
-			2 => "PROPERTY_LIKE",
-			3 => "PROPERTY_DISLIKE",
-			4 => "",
-		),
+		"LIST_FIELD_CODE" => array("",""),
+		"LIST_PROPERTY_CODE" => array("DISLIKE","LIKE","PROPERTY_LIKE","PROPERTY_DISLIKE","LIKE","DISLIKE"),
 		"MAX_VOTE" => "5",
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
@@ -74,6 +56,7 @@ $APPLICATION->SetTitle("Вакансии");
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"SEF_FOLDER" => "/about/news/",
 		"SEF_MODE" => "Y",
+		"SEF_URL_TEMPLATES" => Array("detail"=>"#ELEMENT_CODE#/","news"=>"","section"=>"#SECTION_ID#/"),
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
@@ -91,20 +74,6 @@ $APPLICATION->SetTitle("Вакансии");
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
-		"VOTE_NAMES" => array(
-			0 => "1",
-			1 => "2",
-			2 => "3",
-			3 => "4",
-			4 => "5",
-			5 => "",
-		),
-		"COMPONENT_TEMPLATE" => "mcart",
-		"SEF_URL_TEMPLATES" => array(
-			"news" => "",
-			"section" => "#SECTION_ID#/",
-			"detail" => "#ELEMENT_CODE#/",
-		)
-	),
-	false
+		"VOTE_NAMES" => array("1","2","3","4","5","")
+	)
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

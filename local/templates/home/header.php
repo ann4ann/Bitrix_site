@@ -52,7 +52,7 @@ $current_link  = $APPLICATION->GetCurPage(true)
 
   <div id="panel"><?$APPLICATION->ShowPanel();?></div>
 
-  <div class="site-loader"></div>
+  <!-- <div class="site-loader"></div> -->
 
   <div class="site-wrap">
 
@@ -158,13 +158,17 @@ $current_link  = $APPLICATION->GetCurPage(true)
   <!-- breadcrumps -->
   <?if ($current_link != "/index.php"):?>
 
-    <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumps", Array(
-        "PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
-        "SITE_ID" => "s1",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
-        "START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
-      ),
-      false
-    );?>
+    <?$APPLICATION->IncludeComponent(
+	"bitrix:breadcrumb", 
+	"breadcrumps", 
+	array(
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"START_FROM" => "0",
+		"COMPONENT_TEMPLATE" => "breadcrumps"
+	),
+	false
+);?>
 
 
   <?endif?>
