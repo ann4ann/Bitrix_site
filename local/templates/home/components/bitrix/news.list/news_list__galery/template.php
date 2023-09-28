@@ -13,10 +13,6 @@
 $this->setFrameMode(true);
 ?>
 
-<!-- <pre>
-	<?//var_export($arParams)?>
-</pre> -->
-
 <? 
 	global $USER;
 	$userId = $USER->GetID(); 
@@ -63,7 +59,6 @@ $this->setFrameMode(true);
 								$<?echo $arItem["PROPERTY_PRICE_VALUE"]?>
 							</span>
 							<h3 class="title"><?echo $arItem["NAME"]?></h3>
-							<h4>UserID: <?echo $arItem["CREATED_BY"]?></h4>
 							<p class="location">
 								<?["PREVIEW_TEXT"]?>
 							</p>
@@ -81,13 +76,13 @@ $this->setFrameMode(true);
 									</strong>
 								</div>
 								<div class="col">
-									Floors: <strong><?echo $arItem["PROPERTY_NUM_OF_FLOORS_VALUE"]?></strong>
+									Floors: <strong><?echo $arItem["DISPLAY_PROPERTIES"]["NUM_OF_FLOORS"]["VALUE"]?></strong>
 								</div>
 								<div class="col">
-									Baths: <strong><?echo $arItem["PROPERTY_NUM_OF_BATHROOMS_VALUE"]?></strong>
+									Baths: <strong><?echo $arItem["DISPLAY_PROPERTIES"]["NUM_OF_BATHROOMS"]["VALUE"]?></strong>
 								</div>
 								<div class="col">
-									Garages: <strong><?echo $arItem["PROPERTY_HAS_GARAGE_VALUE"] ? 1 : 0 ?></strong>
+									Garages: <strong><?echo $arItem["DISPLAY_PROPERTIES"]["HAS_GARAGE"]["VALUE"] ? 1 : 0 ?></strong>
 								</div>
 							</div>
 						</div>
@@ -98,5 +93,7 @@ $this->setFrameMode(true);
 
 	</div>
 
+	<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
+		<?=$arResult["NAV_STRING"]?><br />
+	<?endif;?>
 </div>
-
