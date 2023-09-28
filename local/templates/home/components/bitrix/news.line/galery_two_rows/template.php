@@ -13,12 +13,25 @@
 $this->setFrameMode(true);
 ?>
 
+<!-- <pre>
+	<?//var_export($arResult["ITEMS"])?>
+</pre> -->
+
+<? 
+	global $USER;
+	$userId = $USER->GetID(); 
+	$currentPage = $APPLICATION->GetCurPage();
+?>
 <div class="container">
 	<!-- title -->
 	<div class="row mb-5">
 		<div class="col-12">
 			<div class="site-section-title">
-				<h2>New Properties for You</h2>
+				<h2>
+					<?echo $currentPage == "/seller-account/my-ads/"
+						? "MY properties" 
+						: "New properties for you"?>
+				</h2>
 			</div>
 		</div>
 	</div>
@@ -50,6 +63,7 @@ $this->setFrameMode(true);
 								$<?echo $arItem["PROPERTY_PRICE_VALUE"]?>
 							</span>
 							<h3 class="title"><?echo $arItem["NAME"]?></h3>
+							<h4>UserID: <?echo $arItem["CREATED_BY"]?></h4>
 							<p class="location">
 								<?["PREVIEW_TEXT"]?>
 							</p>

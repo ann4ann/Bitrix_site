@@ -140,6 +140,7 @@ $APPLICATION->SetTitle("Главная страница");
 			5 => "PROPERTY_NUM_OF_BATHROOMS",
 			6 => "PROPERTY_TOTAL_AREA",
 			7 => "PROPERTY_NUM_OF_FLOORS",
+			8 => "",
 		),
 		"IBLOCKS" => array(
 		),

@@ -14,6 +14,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
+
 $this->setFrameMode(true);
 
 if($arParams["USE_RSS"]=="Y"):
@@ -36,6 +37,8 @@ if($arParams["USE_SEARCH"]=="Y"):?>
 		['HIDE_ICONS' => 'Y']
 );?>
 <br />
+
+
 <?php
 endif;
 if($arParams["USE_FILTER"]=="Y"):
@@ -58,11 +61,13 @@ $APPLICATION->IncludeComponent(
 );
 ?>
 <br />
-<?php
-endif;
-$APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"",
+<?php endif; ?>
+
+
+<div class="site-section site-section-sm bg-light">
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news.line", 
+	"galery_two_rows",
 	[
 		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -106,10 +111,10 @@ $APPLICATION->IncludeComponent(
 		"ACTIVE_DATE_FORMAT" => $arParams["LIST_ACTIVE_DATE_FORMAT"],
 		"USE_PERMISSIONS" => $arParams["USE_PERMISSIONS"],
 		"GROUP_PERMISSIONS" => $arParams["GROUP_PERMISSIONS"],
-		"FILTER_NAME" => $arParams["FILTER_NAME"],
 		"HIDE_LINK_WHEN_NO_DETAIL" => $arParams["HIDE_LINK_WHEN_NO_DETAIL"],
 		"CHECK_DATES" => $arParams["CHECK_DATES"],
 	],
 	$component,
 	['HIDE_ICONS' => 'Y']
-);
+); ?>
+</div>
