@@ -1,0 +1,8 @@
+{
+  "html.format.templating": true,
+  "editor.matchBrackets": "always",
+  "editor.selectionHighlight": false,
+  "editor.find.loop": true,
+  "editor.find.cursorMoveOnType": true,
+  "editor.suggest.matchOnWordStartOnly": true
+}

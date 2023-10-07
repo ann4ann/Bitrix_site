@@ -1,0 +1,1 @@
+<p><a href="/user" rel="noopener noreferrer"></a></p>
